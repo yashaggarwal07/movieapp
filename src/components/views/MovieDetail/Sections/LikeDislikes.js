@@ -60,7 +60,7 @@ function LikeDislikes(props) {
                 }
             })
 
-    }, [])
+    })
 
 
     const onLike = () => {

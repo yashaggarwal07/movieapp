@@ -25,7 +25,7 @@ function MovieDetailPage(props) {
     useEffect(() => {
 
         let endpointForMovieInfo = `${API_URL}movie/${movieId}?api_key=${API_KEY}&language=en-US`;
-        fetchDetailInfo(endpointForMovieInfo)
+        fetchDetailInfo(endpointForMovieInfo);
 
         axios.post('/api/comment/getComments', movieVariable)
             .then(response => {
@@ -38,7 +38,7 @@ function MovieDetailPage(props) {
                 }
             })
 
-    }, [])
+    })
 
     const toggleActorView = () => {
         setActorToggle(!ActorToggle)

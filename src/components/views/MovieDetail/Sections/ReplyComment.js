@@ -11,8 +11,9 @@ function ReplyComment(props) {
         props.CommentLists.map((comment) => {
 
             if (comment.responseTo === props.parentCommentId) {
-                commentNumber++;
+         commentNumber++;
             }
+        return commentNumber;
         },[]); 
         setChildCommentNumber(commentNumber)
     }, [props.CommentLists, props.parentCommentId])

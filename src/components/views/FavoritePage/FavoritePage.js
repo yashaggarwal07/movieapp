@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Typography, Popover } from 'antd';
 import axios from 'axios';
 import './favorite.css';
@@ -14,9 +14,9 @@ function FavoritePage() {
     const [Loading, setLoading] = useState(true)
     let variable = { userFrom: localStorage.getItem('userId') }
 
-    useEffect(() => {
-        fetchFavoredMovie()
-    }, [])
+    // useEffect(() => {
+    //     fetchFavoredMovie()
+    // }, [])
 
     const fetchFavoredMovie = () => {
         axios.post('/api/favorite/getFavoredMovie', variable)
